@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LiveBeyond — Put longevity science to work</title>
+<meta name="description" content="LiveBeyond helps clinics, health businesses and investors apply longevity science through scientific advisory and BeyondClock biological-age technology.">
+<!-- Pre-launch: keep search engines out until the site is approved. Remove this line at launch. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,500&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+[hidden]{display:none !important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:#FFFFFF}
+a{color:#6938A0}a:hover{color:#3A0F63}
+:focus-visible{outline:2px solid #6938A0;outline-offset:3px}
+.lb-dark :focus-visible{outline-color:#ECDCFC}
+.lb-navlinks{display:flex}
+.lb-menubtn{display:none}
+.lb-split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.lb-split-r{display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr)}
+.lb-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.lb-sci-row{display:grid;grid-template-columns:170px minmax(0,1fr) minmax(0,1.1fr)}
+.lb-people{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
+.lb-faq{display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr)}
+.lb-contact{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr)}
+.lb-fields{display:grid;grid-template-columns:1fr 1fr}
+.lb-btn-primary:hover{background:#3A0F63 !important;color:#FFFFFF !important}
+.lb-btn-ghost:hover{background:#F4ECFC !important}
+.lb-card-link:hover .lb-circle{background:#3A0F63 !important}
+details>summary{list-style:none;cursor:pointer}
+details>summary::-webkit-details-marker{display:none}
+details[open] .lb-plus{transform:rotate(45deg)}
+.lb-plus{transition:transform .2s ease}
+@media (prefers-reduced-motion:reduce){.lb-plus{transition:none}}
+@media (max-width:1000px){
+.lb-navlinks{display:none}.lb-menubtn{display:inline-flex}.lb-navcta{display:none}
+.lb-split,.lb-split-r,.lb-two,.lb-people,.lb-faq,.lb-contact{grid-template-columns:minmax(0,1fr)}
+.lb-sci-row{grid-template-columns:minmax(0,1fr)}
+.lb-media{min-height:320px !important}
+.lb-order-first{order:-1}
+}
+@media (max-width:620px){.lb-fields{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<div style="min-width: 0; background: #FFFFFF; color: #565469; font-family: Poppins, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 17px; line-height: 28px; font-weight: 300;">
+
+<!-- Concept bar -->
+<div class="lb-dark" style="background: #3A0F63; color: #FFFFFF; font-size: 12px; line-height: 18px;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 10px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center;">
+<span style="letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; font-size: 11px;">Independent website concept // For discussion</span>
+<a href="#notes" data-open-notes="" style="color: #ECDCFC; text-decoration: none; font-weight: 500;">Review notes <span style="color: #D9C9F0; font-weight: 300;">/ 19 Nov 2026</span></a>
+</div>
+</div>
+
+<!-- Header -->
+<header style="background: #FFFFFF; border-bottom: 1px solid #E6E0EE; position: relative;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 18px clamp(20px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+<a href="#main" aria-label="LiveBeyond home" style="display: block; line-height: 0;"><img src="images/logo-livebeyond-red.png" alt="LiveBeyond" style="width: 180px; height: auto; display: block;"></a>
+<nav aria-label="Main navigation">
+<ul class="lb-navlinks" style="list-style: none; margin: 0; padding: 0; gap: 36px; font-size: 15px; font-weight: 400;">
+<li><a href="#solutions" style="color: #3A0F63; text-decoration: none;">Who we help</a></li>
+<li><a href="#beyondclock" style="color: #3A0F63; text-decoration: none;">BeyondClock</a></li>
+<li><a href="#science" style="color: #3A0F63; text-decoration: none;">The science</a></li>
+<li><a href="#team" style="color: #3A0F63; text-decoration: none;">Our people</a></li>
+</ul>
+</nav>
+<div style="display: flex; align-items: center; gap: 12px;">
+<a class="lb-navcta lb-btn-primary" href="#contact" style="background: #6938A0; color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 14px; padding: 12px 22px; border-radius: 999px; white-space: nowrap;">Let’s talk</a>
+<button class="lb-menubtn" type="button" aria-expanded="false" id="menu-btn" aria-controls="mobile-nav" aria-label="Open navigation" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #D9C9F0; background: #FFFFFF; color: #3A0F63; align-items: center; justify-content: center; cursor: pointer;">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 14h14"></path></svg>
+</button>
+</div>
+</div>
+<div id="mobile-nav-wrap" hidden>
+<nav id="mobile-nav" aria-label="Mobile navigation" style="border-top: 1px solid #E6E0EE; background: #FFFFFF; padding: 8px clamp(20px, 4vw, 48px) 20px; display: flex; flex-direction: column;">
+<a href="#solutions" data-close-menu="" style="color: #3A0F63; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #F4ECFC;">Who we help</a>
+<a href="#beyondclock" data-close-menu="" style="color: #3A0F63; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #F4ECFC;">BeyondClock</a>
+<a href="#science" data-close-menu="" style="color: #3A0F63; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #F4ECFC;">The science</a>
+<a href="#team" data-close-menu="" style="color: #3A0F63; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #F4ECFC;">Our people</a>
+<a href="#contact" data-close-menu="" style="color: #6938A0; text-decoration: none; padding: 12px 0; font-weight: 500;">Start a conversation</a>
+</nav>
+</div>
+</header>
+
+<main id="main">
+
+<!-- Hero: deck cover style, text left, image right -->
+<section aria-labelledby="hero-title" style="background: #FFFFFF;">
+<div class="lb-split" style="min-height: 680px;">
+<div style="padding: clamp(40px, 6vw, 88px) clamp(20px, 5vw, 72px) 40px max(clamp(20px, 4vw, 48px), calc((100vw - 1240px) / 2 + 48px)); display: flex; flex-direction: column; justify-content: space-between; gap: 48px; background: #F4ECFC;">
+<div style="display: flex; flex-direction: column; gap: 28px;">
+<div style="font-size: 11px; line-height: 16px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6938A0;">Scientific advisory + biological-age technology</div>
+<h1 id="hero-title" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(48px, 6vw, 84px); line-height: 1.04; letter-spacing: -0.01em; color: #6938A0;">Put longevity science <span style="color: #B8429F;">to work.</span></h1>
+<p style="margin: 0; max-width: 520px; font-size: 19px; line-height: 31px; color: #565469;">We help clinics build longevity programmes, health businesses evaluate and develop products, and investors assess the science behind opportunities.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 20px; align-items: center;">
+<a class="lb-card-link" href="#solutions" style="display: inline-flex; align-items: center; gap: 14px; text-decoration: none; color: #3A0F63; font-weight: 500; font-size: 15px;"><span class="lb-circle" style="width: 48px; height: 48px; border-radius: 50%; background: #6938A0; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span>Find your starting point</a>
+<a class="lb-btn-ghost" href="#contact" style="color: #6938A0; text-decoration: none; font-weight: 500; font-size: 15px; padding: 12px 22px; border: 1px solid #B79AE6; border-radius: 999px;">Talk to our team</a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px;">
+<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px;">
+<li style="background: #FFFFFF; border: 1px solid #E6E0EE; border-radius: 6px; padding: 14px 16px;"><div style="font-size: 10px; line-height: 14px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: #6E6C84;">Scientific leadership</div><div style="margin-top: 6px; font-size: 14px; line-height: 20px; font-weight: 400; color: #3A0F63;">Co-founded by Brian Kennedy</div></li>
+<li style="background: #FFFFFF; border: 1px solid #E6E0EE; border-radius: 6px; padding: 14px 16px;"><div style="font-size: 10px; line-height: 14px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: #6E6C84;">BeyondClock research</div><div style="margin-top: 6px; font-size: 14px; line-height: 20px; font-weight: 400; color: #3A0F63;">LinAge2 · Published in <i>npj Aging</i></div></li>
+<li style="background: #ECDCFC; border: 1px solid #ECDCFC; border-radius: 6px; padding: 14px 16px;"><div style="font-size: 10px; line-height: 14px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: #5A2A8A;">Real-world application</div><div style="margin-top: 6px; font-size: 14px; line-height: 20px; font-weight: 400; color: #3A0F63;">Raffles HealthyLongevity</div></li>
+</ul>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding-top: 14px; border-top: 1px solid #E6E0EE; font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6E6C84;"><span>LiveBeyond // Singapore</span><span>Science → Strategy → Application</span></div>
+</div>
+</div>
+<div class="lb-media" style="position: relative; min-height: 680px; background: #ECDCFC;">
+<img src="images/hero-hills.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+<div style="position: absolute; left: 24px; bottom: 24px; right: 24px; max-width: 340px; background: rgba(255, 255, 255, 0.92); border-radius: 6px; padding: 18px 20px;">
+<div style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6938A0;">+ What you get</div>
+<p style="margin: 8px 0 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 20px; line-height: 27px; color: #3A0F63;">Clearer evidence. Better decisions. A practical next step.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 01 Who we help -->
+<section id="solutions" aria-labelledby="solutions-title" style="background: #FFFFFF;">
+<div class="lb-split" style="min-height: 520px; border-top: 1px solid #E6E0EE;">
+<div style="padding: clamp(48px, 6vw, 88px) clamp(28px, 5vw, 80px) clamp(48px, 6vw, 88px) max(clamp(20px, 4vw, 48px), calc((100vw - 1240px) / 2 + 48px)); display: flex; flex-direction: column; justify-content: center; gap: 22px;">
+<div style="font-size: 11px; line-height: 16px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6938A0;">Section // Who we help</div>
+<div style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: clamp(72px, 8vw, 112px); line-height: 1; color: #6938A0;">01</div>
+<h2 id="solutions-title" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(36px, 4vw, 52px); line-height: 1.12; color: #6938A0;">Start with the decision you need to make.</h2>
+<p style="margin: 0; max-width: 460px; color: #565469;">Different organisations need different answers. Choose the route that fits yours.</p>
+</div>
+<div class="lb-media" style="position: relative; min-height: 520px; background: #ECDCFC;">
+<img src="images/crystals.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+</div>
+</div>
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 48px;">
+<div style="font-size: 11px; line-height: 16px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6938A0;">01 // Three routes in</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+<article style="background: #ECDCFC; border-radius: 6px; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px;">
+<div style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 48px; line-height: 1; color: #8E2F7E;">01</div>
+<div style="width: 32px; height: 2px; background: #B8429F;"></div>
+<div style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #5A2A8A;">Clinics &amp; laboratories</div>
+<h3 style="margin: 0; font-size: 22px; line-height: 30px; font-weight: 400; color: #3A0F63;">Build a longevity offering with substance.</h3>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: #4A4860;">Bring scientific depth to your programme and make biological-age reporting easier to understand.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 21px; color: #3A0F63;">
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="color: #6938A0; font-weight: 500;">+</span>Review your programme and its scientific rationale</li>
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="color: #6938A0; font-weight: 500;">+</span>Discuss protocols and how to evaluate them</li>
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="color: #6938A0; font-weight: 500;">+</span>Explore BeyondClock for your existing lab panel</li>
+</ul>
+<div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #D9C9F0; display: flex; flex-direction: column; gap: 14px;">
+<span style="font-size: 12px; line-height: 18px; color: #5A2A8A; font-weight: 400;">BeyondImpact + BeyondClock</span>
+<a class="lb-card-link" href="#contact" data-pick="clinic" style="display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: #3A0F63; font-weight: 500; font-size: 15px;"><span class="lb-circle" style="width: 40px; height: 40px; border-radius: 50%; background: #6938A0; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span>Discuss your clinic</a>
+</div>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #E6E0EE; border-radius: 6px; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px;">
+<div style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 48px; line-height: 1; color: #B8429F;">02</div>
+<div style="width: 32px; height: 2px; background: #C455B8;"></div>
+<div style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6E6C84;">Biotech &amp; health businesses</div>
+<h3 style="margin: 0; font-size: 22px; line-height: 30px; font-weight: 400; color: #3A0F63;">Build around evidence. Not just a good story.</h3>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: #565469;">Understand the scientific case for your product and what needs to happen before it can move forward.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 21px; color: #3A0F63;">
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="color: #6938A0; font-weight: 500;">+</span>Assess the evidence behind an intervention</li>
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="color: #6938A0; font-weight: 500;">+</span>Identify validation and development questions</li>
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="color: #6938A0; font-weight: 500;">+</span>Plan the route from research to practical use</li>
+</ul>
+<div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #E6E0EE; display: flex; flex-direction: column; gap: 14px;">
+<span style="font-size: 12px; line-height: 18px; color: #6E6C84; font-weight: 400;">BeyondImpact · Scientific advisory</span>
+<a class="lb-card-link" href="#contact" data-pick="biotech" style="display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: #3A0F63; font-weight: 500; font-size: 15px;"><span class="lb-circle" style="width: 40px; height: 40px; border-radius: 50%; background: #6938A0; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span>Discuss your product</a>
+</div>
+</article>
+
+<article style="background: #F4ECFC; border-radius: 6px; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px;">
+<div style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 48px; line-height: 1; color: #8E2F7E;">03</div>
+<div style="width: 32px; height: 2px; background: #B8429F;"></div>
+<div style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #5A2A8A;">Investors &amp; family offices</div>
+<h3 style="margin: 0; font-size: 22px; line-height: 30px; font-weight: 400; color: #3A0F63;">Understand the science before you commit.</h3>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: #4A4860;">Look beyond a pitch deck to the biological rationale, evidence quality and unanswered questions.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 21px; color: #3A0F63;">
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="color: #6938A0; font-weight: 500;">+</span>Examine the scientific thesis and supporting data</li>
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="color: #6938A0; font-weight: 500;">+</span>Surface evidence gaps and translation risks</li>
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="color: #6938A0; font-weight: 500;">+</span>Frame the questions for further diligence</li>
+</ul>
+<div style="margin-top: auto; padding-top: 18px; border-top: 1px solid #D9C9F0; display: flex; flex-direction: column; gap: 14px;">
+<span style="font-size: 12px; line-height: 18px; color: #5A2A8A; font-weight: 400;">BeyondInsight · Scientific due diligence</span>
+<a class="lb-card-link" href="#contact" data-pick="investor" style="display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: #3A0F63; font-weight: 500; font-size: 15px;"><span class="lb-circle" style="width: 40px; height: 40px; border-radius: 50%; background: #6938A0; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span>Discuss an opportunity</a>
+</div>
+</article>
+</div>
+
+<div style="background: #F4ECFC; border-radius: 6px; padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: center; justify-content: space-between;">
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<span style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #5A2A8A;">+ Message</span>
+<span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 20px; line-height: 28px; color: #3A0F63;">Each engagement is scoped around your question, stage and team.</span>
+</div>
+<a href="#contact" data-pick="partner" style="color: #6938A0; font-weight: 500; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px;">Looking to partner with us? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+</div>
+</div>
+</section>
+
+<!-- 02 BeyondClock: deck section-slide style, image left -->
+<section id="beyondclock" aria-labelledby="bc-title" style="background: #FFFFFF;">
+<div class="lb-split-r" style="min-height: 560px; border-top: 1px solid #E6E0EE;">
+<div class="lb-media" style="position: relative; min-height: 560px; background: #E6E0EE;">
+<img src="images/molecular-ring.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+</div>
+<div style="padding: clamp(48px, 6vw, 88px) max(clamp(20px, 4vw, 48px), calc((100vw - 1240px) / 2 + 48px)) clamp(48px, 6vw, 88px) clamp(28px, 5vw, 80px); display: flex; flex-direction: column; justify-content: center; gap: 22px;">
+<div style="font-size: 11px; line-height: 16px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6938A0;">Section // Our flagship technology</div>
+<div style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: clamp(72px, 8vw, 112px); line-height: 1; color: #6938A0;">02</div>
+<div style="font-size: 13px; line-height: 18px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; color: #3A0F63;">BeyondClock<sup style="font-size: 9px; letter-spacing: 0;">™</sup></div>
+<h2 id="bc-title" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(36px, 4vw, 52px); line-height: 1.12; color: #3A0F63;">More than an age. <span style="color: #B8429F;">The pattern behind it.</span></h2>
+<p style="margin: 0; max-width: 520px; color: #565469;">BeyondClock uses routine biomarkers and health inputs to estimate biological age—and show which patterns contribute to that estimate.</p>
+<a class="lb-card-link" href="#contact" data-pick="demo" style="display: inline-flex; align-items: center; gap: 14px; text-decoration: none; color: #3A0F63; font-weight: 500; font-size: 15px; align-self: flex-start;"><span class="lb-circle" style="width: 48px; height: 48px; border-radius: 50%; background: #6938A0; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span>Request a BeyondClock demo</a>
+</div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 1px solid #E6E0EE;">
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px, 8vw, 104px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<div style="font-size: 11px; line-height: 16px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6938A0;">02 // How BeyondClock works</div>
+<h3 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(30px, 3vw, 40px); line-height: 1.15; color: #3A0F63;">Built from familiar inputs.</h3>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+<li style="background: #FFFFFF; border: 1px solid #E6E0EE; border-radius: 6px; padding: 28px; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+<span style="width: 48px; height: 48px; border-radius: 8px; background: #F4ECFC; color: #6938A0; display: inline-flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"></path><path d="M7.5 15h9"></path></svg></span>
+<span style="font-size: 11px; line-height: 16px; letter-spacing: 0.15em; color: #6E6C84;">01</span>
+</div>
+<div style="height: 1px; background: #E6E0EE;"></div>
+<h4 style="margin: 0; font-size: 18px; line-height: 26px; font-weight: 400; color: #3A0F63;">Start with familiar inputs.</h4>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #565469;">Blood and urine biomarkers, physical measurements and questionnaire responses. Review panel compatibility with our team.</p>
+</li>
+<li style="background: #FFFFFF; border: 1px solid #E6E0EE; border-radius: 6px; padding: 28px; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+<span style="width: 48px; height: 48px; border-radius: 8px; background: #F4ECFC; color: #6938A0; display: inline-flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg></span>
+<span style="font-size: 11px; line-height: 16px; letter-spacing: 0.15em; color: #6E6C84;">02</span>
+</div>
+<div style="height: 1px; background: #E6E0EE;"></div>
+<h4 style="margin: 0; font-size: 18px; line-height: 26px; font-weight: 400; color: #3A0F63;">See the result and its contributors.</h4>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #565469;">A biological-age estimate, comparison with actual age, and the biomarker patterns behind the number.</p>
+</li>
+<li style="background: #FFFFFF; border: 1px solid #E6E0EE; border-radius: 6px; padding: 28px; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+<span style="width: 48px; height: 48px; border-radius: 8px; background: #F4ECFC; color: #6938A0; display: inline-flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+<span style="font-size: 11px; line-height: 16px; letter-spacing: 0.15em; color: #6E6C84;">03</span>
+</div>
+<div style="height: 1px; background: #E6E0EE;"></div>
+<h4 style="margin: 0; font-size: 18px; line-height: 26px; font-weight: 400; color: #3A0F63;">Compare results over time.</h4>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #565469;">Repeat assessments can show how the estimated profile changes. Interpretation remains with the clinician.</p>
+</li>
+</ol>
+
+<img src="images/swirl.jpg" alt="" aria-hidden="true" style="width: 100%; height: auto; display: block;">
+
+<div class="lb-two" style="gap: 40px; align-items: center;">
+<div style="display: flex; flex-direction: column; gap: 18px; max-width: 500px;">
+<div style="font-size: 11px; line-height: 16px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6938A0;">Sample report</div>
+<h3 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(30px, 3vw, 40px); line-height: 1.15; color: #3A0F63;">Biological age, <span style="color: #B8429F;">explained.</span></h3>
+<p style="margin: 0; color: #565469;">See what a report tells you. And what it doesn’t.</p>
+<button type="button" class="lb-btn-primary" data-open-report="" style="align-self: flex-start; background: #6938A0; color: #FFFFFF; border: 0; font-family: Poppins, sans-serif; font-weight: 500; font-size: 15px; padding: 14px 26px; border-radius: 999px; cursor: pointer; min-height: 48px;">Explore this example</button>
+<p style="margin: 8px 0 0; font-size: 12px; line-height: 19px; color: #6E6C84;">BeyondClock provides general-wellbeing information, not medical advice. It is not for medical purposes, diagnosis or treatment, and does not predict an individual’s lifespan.</p>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E6E0EE; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 24px 48px -32px rgba(58, 15, 99, 0.35);">
+<div style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline;">
+<span style="font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; color: #3A0F63;">BeyondClock</span>
+<span style="font-size: 11px; color: #6E6C84;">Sample · adapted layout</span>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+<div style="border: 1px solid #E6E0EE; border-left: 3px solid #B79AE6; border-radius: 4px; padding: 14px 16px;"><div style="font-size: 12px; line-height: 18px; color: #6E6C84;">Chronological age</div><div style="margin-top: 4px; font-size: 30px; line-height: 36px; font-weight: 400; color: #3A0F63;">57.5 <span style="font-size: 13px; color: #6E6C84;">yrs</span></div></div>
+<div style="border: 1px solid #E6E0EE; border-left: 3px solid #6938A0; border-radius: 4px; padding: 14px 16px;"><div style="font-size: 12px; line-height: 18px; color: #6E6C84;">Estimated biological age</div><div style="margin-top: 4px; font-size: 30px; line-height: 36px; font-weight: 400; color: #3A0F63;">60.6 <span style="font-size: 13px; color: #6E6C84;">yrs</span></div></div>
+</div>
+<div style="background: #ECDCFC; border-radius: 4px; padding: 12px 16px; display: flex; justify-content: space-between; gap: 12px; font-size: 14px; color: #3A0F63;"><span>Difference from chronological age</span><strong style="font-weight: 500;">+3.1 years</strong></div>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6E6C84;">Selected contributing biomarker patterns</div>
+<div style="display: grid; grid-template-columns: 64px 1fr 72px; gap: 12px; align-items: center; font-size: 13px; color: #3A0F63;"><span>PC1F</span><span aria-hidden="true" style="height: 8px; background: #F4ECFC; border-radius: 4px; overflow: hidden;"><span style="display: block; width: 100%; height: 100%; background: #6938A0;"></span></span><span style="text-align: right;">+5.4 yrs</span></div>
+<div style="display: grid; grid-template-columns: 64px 1fr 72px; gap: 12px; align-items: center; font-size: 13px; color: #3A0F63;"><span>PC24F</span><span aria-hidden="true" style="height: 8px; background: #F4ECFC; border-radius: 4px; overflow: hidden;"><span style="display: block; width: 50%; height: 100%; background: #6938A0;"></span></span><span style="text-align: right;">+2.7 yrs</span></div>
+<div style="display: grid; grid-template-columns: 64px 1fr 72px; gap: 12px; align-items: center; font-size: 13px; color: #3A0F63;"><span>PC6F</span><span aria-hidden="true" style="height: 8px; background: #F4ECFC; border-radius: 4px; overflow: hidden;"><span style="display: block; width: 52%; height: 100%; background: #C455B8;"></span></span><span style="text-align: right;">−2.8 yrs</span></div>
+</div>
+<p style="margin: 0; font-size: 12px; line-height: 18px; color: #6E6C84;">Each “PC” is a grouped biomarker pattern used by the model. These are selected contributions, not a full breakdown or treatment targets.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Interstitial: deck quote slide -->
+<section aria-label="Our approach" style="background: #FFFFFF;">
+<div class="lb-split-r" style="min-height: 440px;">
+<div class="lb-media" style="position: relative; min-height: 440px; background: #F4ECFC;">
+<img src="images/molecular-ring-2.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+</div>
+<div style="padding: clamp(48px, 6vw, 80px) max(clamp(20px, 4vw, 48px), calc((100vw - 1240px) / 2 + 48px)) clamp(48px, 6vw, 80px) clamp(28px, 5vw, 80px); display: flex; flex-direction: column; justify-content: center; gap: 12px;">
+<p style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.25; color: #3A0F63;">Clearer <span style="color: #B8429F;">evidence.</span><br>Better <span style="color: #B8429F;">decisions.</span><br>A practical <span style="color: #B8429F;">next step.</span></p>
+<div style="margin-top: 20px; font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6E6C84;">LiveBeyond // Science → Strategy → Application</div>
+</div>
+</div>
+</section>
+
+<!-- 03 The science: deck "peer-reviewed and published" rows -->
+<section id="science" aria-labelledby="science-title" style="background: #F4ECFC;">
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px;">
+<div style="font-size: 11px; line-height: 16px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #5A2A8A;">03 // The science</div>
+<h2 id="science-title" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(36px, 4vw, 52px); line-height: 1.12; color: #3A0F63;">The research and its real-world application.</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<article class="lb-sci-row" style="background: #FFFFFF; border: 1px solid #E6E0EE; border-radius: 6px; padding: 28px 32px; gap: 20px 40px; align-items: start;">
+<div style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 44px; line-height: 1; color: #B8429F;">2025</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6E6C84;">Published research</div>
+<h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 400; color: #3A0F63;">The LinAge2 foundation</h3>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #565469;">Fong et al., LinAge2, <i>npj Aging</i></p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<div style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6E6C84;">What it shows</div>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: #565469;">The research behind BeyondClock was published in <i>npj Aging</i>. It evaluates a clinical-biomarker clock against mortality outcomes and other biological-age models.</p>
+<p style="margin: 0; font-size: 13px; line-height: 20px; color: #6E6C84;">Research validation is not proof that lowering an estimated age extends life.</p>
+<a href="https://www.nature.com/articles/s41514-025-00221-4" target="_blank" rel="noopener noreferrer" style="color: #6938A0; font-weight: 500; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px;">Read the peer-reviewed paper <span aria-hidden="true">↗</span><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);"> (opens a new tab)</span></a>
+</div>
+</article>
+<article class="lb-sci-row" style="background: #FFFFFF; border: 1px solid #E6E0EE; border-radius: 6px; padding: 28px 32px; gap: 20px 40px; align-items: start;">
+<div style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 44px; line-height: 1; color: #B8429F;">Today</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6E6C84;">In practice · Singapore</div>
+<h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 400; color: #3A0F63;">Raffles Medical Group</h3>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #565469;">Raffles HealthyLongevity</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<div style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6E6C84;">What it shows</div>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: #565469;">Raffles HealthyLongevity publicly lists the Raffles Biological Age Clock Test with LiveBeyond as part of its service offering.</p>
+<p style="margin: 0; font-size: 13px; line-height: 20px; color: #6E6C84;">A real-world application of the technology—not a claim of proven patient outcomes.</p>
+<a href="https://www.rafflesmedicalgroup.com/raffles-healthy-longevity/" target="_blank" rel="noopener noreferrer" style="color: #6938A0; font-weight: 500; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px;">View the Raffles offering <span aria-hidden="true">↗</span><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);"> (opens a new tab)</span></a>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- 04 How we work -->
+<section aria-labelledby="work-title" style="background: #FFFFFF;">
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 44px;">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 64px; align-items: flex-end; justify-content: space-between;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 720px;">
+<div style="font-size: 11px; line-height: 16px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6938A0;">04 // A practical way to work together</div>
+<h2 id="work-title" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(36px, 4vw, 52px); line-height: 1.12; color: #3A0F63;">A question. A scope. <span style="color: #B8429F;">A useful answer.</span></h2>
+</div>
+<p style="margin: 0; max-width: 400px; color: #565469;">Start with one decision that matters. Build the right engagement around it.</p>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+<li style="border: 1px solid #E6E0EE; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+<span style="font-size: 64px; line-height: 1; font-weight: 300; color: #6938A0;">1</span>
+<span style="height: 1px; background: #E6E0EE;"></span>
+<h3 style="margin: 0; font-size: 19px; line-height: 27px; font-weight: 400; color: #3A0F63;">Define the question.</h3>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #565469;">Tell us what you are building, evaluating or trying to improve. Bring your context—not a perfectly prepared brief.</p>
+</li>
+<li style="border: 1px solid #E6E0EE; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+<span style="font-size: 64px; line-height: 1; font-weight: 300; color: #6938A0;">2</span>
+<span style="height: 1px; background: #E6E0EE;"></span>
+<h3 style="margin: 0; font-size: 19px; line-height: 27px; font-weight: 400; color: #3A0F63;">Agree on the work.</h3>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #565469;">Discuss the expertise, evidence and outputs you need. Confirm scope, responsibilities, timing and fees before starting.</p>
+</li>
+<li style="background: #ECDCFC; border: 1px solid #ECDCFC; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+<span style="font-size: 64px; line-height: 1; font-weight: 300; color: #6938A0;">3</span>
+<span style="height: 1px; background: #D9C9F0;"></span>
+<h3 style="margin: 0; font-size: 19px; line-height: 27px; font-weight: 400; color: #3A0F63;">Make the next decision.</h3>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #4A4860;">Work towards a defined output: a programme review, a validation roadmap, a scientific assessment or a BeyondClock demonstration.</p>
+</li>
+</ol>
+<div style="background: #F4ECFC; border-radius: 6px; padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: center; justify-content: space-between;">
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<span style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #5A2A8A;">+ Message</span>
+<span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 20px; line-height: 28px; color: #3A0F63;">A focused first project can be the start of a longer collaboration.</span>
+</div>
+<a href="#contact" data-pick="team" style="color: #6938A0; font-weight: 500; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px;">Tell us what you are working on <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+</div>
+</div>
+</section>
+
+<!-- 05 Our people: deck "science team" rows -->
+<section id="team" aria-labelledby="team-title" style="background: #FFFFFF;">
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 44px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px;">
+<div style="font-size: 11px; line-height: 16px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6938A0;">05 // The people behind LiveBeyond</div>
+<h2 id="team-title" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(36px, 4vw, 52px); line-height: 1.12; color: #3A0F63;">Scientific depth. A practical perspective.</h2>
+<p style="margin: 0; color: #565469;">Connecting the researchers advancing the field with the organisations putting it to use.</p>
+</div>
+<div class="lb-people" style="gap: 24px; align-items: stretch;">
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<article style="background: #FFFFFF; border: 1px solid #E6E0EE; border-radius: 6px; padding: 24px; display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 24px; align-items: start;">
+<img src="images/brian-kennedy.jpg" alt="Portrait of Brian Kennedy" style="width: 112px; height: 112px; object-fit: cover; border-radius: 6px; display: block; background: #F4ECFC;">
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6E6C84;">Co-founder &amp; chair</div>
+<h3 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: 26px; line-height: 32px; color: #3A0F63;">Prof. Brian Kennedy, PhD</h3>
+<ul style="list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 21px; color: #565469;">
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="color: #6938A0; font-weight: 500;">+</span>Professor at the National University of Singapore</li>
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="color: #6938A0; font-weight: 500;">+</span>Former President and CEO of the Buck Institute for Research on Aging</li>
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="color: #6938A0; font-weight: 500;">+</span>Co-author of the LinAge2 research</li>
+</ul>
+<a href="https://www.nature.com/articles/s41514-025-00221-4" target="_blank" rel="noopener noreferrer" style="color: #6938A0; font-weight: 500; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px;">See the published research <span aria-hidden="true">↗</span><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);"> (opens a new tab)</span></a>
+</div>
+</article>
+<article style="background: #ECDCFC; border-radius: 6px; padding: 24px; display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 24px; align-items: start;">
+<div aria-hidden="true" style="width: 112px; height: 112px; border-radius: 6px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 40px; color: #6938A0;">JB</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #5A2A8A;">Co-founder</div>
+<h3 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: 26px; line-height: 32px; color: #3A0F63;">Julie Ying Baron</h3>
+<p style="margin: 4px 0 0; font-size: 14px; line-height: 22px; color: #4A4860;">Bringing longevity science, clinical adoption and commercial collaboration into the same conversation.</p>
+<p style="margin: 0; font-size: 13px; line-height: 20px; color: #4A4860;">For organisations exploring how to work with LiveBeyond, start by sharing the opportunity and the question you need answered.</p>
+<a href="#contact" data-pick="team" style="color: #3A0F63; font-weight: 500; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px;">Connect with the team <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+</div>
+</article>
+<div style="display: flex; flex-direction: column; gap: 12px; padding-top: 8px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline;">
+<span style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6938A0;">LinAge2 research collaborators</span>
+<span style="font-size: 13px; color: #6E6C84;">Contributors to the research behind BeyondClock:</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px;">
+<div style="background: #FFFFFF; border: 1px solid #E6E0EE; border-radius: 6px; padding: 14px; display: flex; gap: 14px; align-items: center;"><img src="images/jan-gruber.jpg" alt="Portrait of Jan Gruber" style="width: 56px; height: 56px; object-fit: cover; border-radius: 4px; flex: none;"><div><div style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 19px; line-height: 24px; color: #3A0F63;">Jan Gruber</div><div style="font-size: 13px; line-height: 19px; color: #565469;">Aging biology and healthspan research</div></div></div>
+<div style="background: #FFFFFF; border: 1px solid #E6E0EE; border-radius: 6px; padding: 14px; display: flex; gap: 14px; align-items: center;"><img src="images/sheng-fong.jpg" alt="Portrait of Sheng Fong" style="width: 56px; height: 56px; object-fit: cover; border-radius: 4px; flex: none;"><div><div style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 19px; line-height: 24px; color: #3A0F63;">Sheng Fong</div><div style="font-size: 13px; line-height: 19px; color: #565469;">Clinician-scientist, geriatric medicine</div></div></div>
+</div>
+</div>
+</div>
+<div class="lb-media lb-order-first" style="position: relative; min-height: 480px; border-radius: 6px; overflow: hidden; background: #ECDCFC;">
+<img src="images/couple.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Partnership band: deck "Join us" style -->
+<section aria-labelledby="partner-title" class="lb-dark" style="background: #3A0F63; color: #FFFFFF;">
+<div class="lb-split" style="min-height: 480px;">
+<div style="padding: clamp(56px, 7vw, 96px) clamp(28px, 5vw, 72px) clamp(56px, 7vw, 96px) max(clamp(20px, 4vw, 48px), calc((100vw - 1240px) / 2 + 48px)); display: flex; flex-direction: column; justify-content: center; gap: 22px;">
+<div style="font-size: 11px; line-height: 16px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #D9C9F0;">Research &amp; commercial partnerships</div>
+<h2 id="partner-title" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(36px, 4vw, 54px); line-height: 1.12; color: #FFFFFF;">Have something worth bringing <span style="color: #ECDCFC;">into the world?</span></h2>
+<div style="width: 48px; height: 2px; background: #D86CCC;"></div>
+<p style="margin: 0; max-width: 520px; color: #D9C9F0;">Let’s explore where your research, technology or distribution network fits—and what it would take to make it useful.</p>
+<a href="#contact" data-pick="partnership" style="align-self: flex-start; background: #FFFFFF; color: #3A0F63; text-decoration: none; font-weight: 500; font-size: 15px; padding: 14px 26px; border-radius: 999px; display: inline-flex; align-items: center; gap: 10px;">Explore a partnership <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+</div>
+<div class="lb-media" style="position: relative; min-height: 480px; background: #4A1A78;">
+<img src="images/pavilion.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section aria-labelledby="faq-title" style="background: #FFFFFF;">
+<div class="lb-faq" style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px); gap: 40px 72px; align-items: start;">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<div style="font-size: 11px; line-height: 16px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6938A0;">06 // A little more clarity</div>
+<h2 id="faq-title" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(36px, 4vw, 52px); line-height: 1.12; color: #3A0F63;">Good questions. <span style="color: #B8429F;">Straight answers.</span></h2>
+<p style="margin: 0; color: #565469;">The first conversation should not have to start with “What do you actually do?”</p>
+<a href="#contact" style="color: #6938A0; font-weight: 500; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px;">Ask us something else <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<details style="border: 1px solid #E6E0EE; border-radius: 6px; padding: 0 24px;">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-size: 17px; line-height: 25px; font-weight: 400; color: #3A0F63;">What is LiveBeyond, in one sentence?<span class="lb-plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; background: #F4ECFC; color: #6938A0; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 300;">+</span></summary>
+<p style="margin: 0; padding: 0 0 22px; font-size: 15px; line-height: 24px; color: #565469;">LiveBeyond helps organisations apply longevity science through scientific advisory, research-to-market support and BeyondClock biological-age technology.</p>
+</details>
+<details style="border: 1px solid #E6E0EE; border-radius: 6px; padding: 0 24px;">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-size: 17px; line-height: 25px; font-weight: 400; color: #3A0F63;">How is LiveBeyond different from BeyondClock?<span class="lb-plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; background: #F4ECFC; color: #6938A0; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 300;">+</span></summary>
+<p style="margin: 0; padding: 0 0 22px; font-size: 15px; line-height: 24px; color: #565469;">LiveBeyond is the company and broader scientific-advisory offering. BeyondClock is its biological-age platform. You can discuss an advisory or partnership project without adopting the platform.</p>
+</details>
+<details style="border: 1px solid #E6E0EE; border-radius: 6px; padding: 0 24px;">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-size: 17px; line-height: 25px; font-weight: 400; color: #3A0F63;">Do we need specialised genetic testing?<span class="lb-plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; background: #F4ECFC; color: #6938A0; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 300;">+</span></summary>
+<p style="margin: 0; padding: 0 0 22px; font-size: 15px; line-height: 24px; color: #565469;">BeyondClock is based on routine clinical biomarkers, not genomic sequencing. The full input set also includes physical measurements and questionnaire responses. Your existing panel may cover much of what is required; ask the team to check compatibility before assuming it is complete.</p>
+</details>
+<details style="border: 1px solid #E6E0EE; border-radius: 6px; padding: 0 24px;">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-size: 17px; line-height: 25px; font-weight: 400; color: #3A0F63;">Does a biological-age score diagnose disease?<span class="lb-plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; background: #F4ECFC; color: #6938A0; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 300;">+</span></summary>
+<p style="margin: 0; padding: 0 0 22px; font-size: 15px; line-height: 24px; color: #565469;">No. The supplied sample report describes the software as intended for general wellbeing, not for medical purposes. Its outputs should not be treated as a diagnosis, a treatment plan or a prediction of lifespan. A change in the model’s estimate does not by itself demonstrate a health benefit.</p>
+</details>
+<details style="border: 1px solid #E6E0EE; border-radius: 6px; padding: 0 24px;">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-size: 17px; line-height: 25px; font-weight: 400; color: #3A0F63;">What does an engagement cost?<span class="lb-plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; background: #F4ECFC; color: #6938A0; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 300;">+</span></summary>
+<p style="margin: 0; padding: 0 0 22px; font-size: 15px; line-height: 24px; color: #565469;">Request a scope and quote based on your use case. For BeyondClock, discuss panel requirements, report volumes and onboarding. For advisory work, specify the question, expected output and timing. Ask the team for a quote and any applicable minimum commitment.</p>
+</details>
+<details style="border: 1px solid #E6E0EE; border-radius: 6px; padding: 0 24px;">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-size: 17px; line-height: 25px; font-weight: 400; color: #3A0F63;">Can I book a personal health assessment here?<span class="lb-plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; background: #F4ECFC; color: #6938A0; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 300;">+</span></summary>
+<p style="margin: 0; padding: 0 0 22px; font-size: 15px; line-height: 24px; color: #565469;">This page is for organisations exploring services or partnerships. It does not book medical appointments or accept personal laboratory reports. Individuals should speak with their healthcare provider about appropriate assessment.</p>
+</details>
+</div>
+</div>
+</section>
+
+<!-- Contact: deck closing-slide plum panel + form -->
+<section id="contact" aria-labelledby="contact-title" style="background: #F4ECFC;">
+<div class="lb-contact" style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px); gap: 20px; align-items: stretch;">
+<div class="lb-dark" style="background: #3A0F63; color: #FFFFFF; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column;">
+<img src="images/woman-sunrise.jpg" alt="" aria-hidden="true" style="width: 100%; height: 300px; object-fit: cover; object-position: center 22%; display: block;">
+<div style="padding: 36px 36px 40px; display: flex; flex-direction: column; gap: 18px; flex: 1;">
+<div style="font-size: 11px; line-height: 16px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #D9C9F0;">Let’s find the right starting point</div>
+<h2 id="contact-title" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(34px, 3.4vw, 46px); line-height: 1.12; color: #FFFFFF;">What are you working <span style="color: #ECDCFC;">towards?</span></h2>
+<p style="margin: 0; color: #D9C9F0; font-size: 16px; line-height: 26px;">A stronger clinic programme. A product with better evidence. A more informed investment. Tell us where you are starting.</p>
+<div style="margin-top: auto; padding-top: 24px; display: flex; flex-direction: column; gap: 10px;">
+<div style="width: 48px; height: 2px; background: #D86CCC;"></div>
+<a href="mailto:superpower@livebeyond.ai" style="color: #FFFFFF; font-size: 17px; font-weight: 400; text-decoration: none;">superpower@livebeyond.ai</a>
+<span style="font-size: 13px; color: #D9C9F0;">LiveBeyond Pte. Ltd. · Singapore</span>
+</div>
+</div>
+</div>
+
+<div style="background: #FFFFFF; border-radius: 6px; padding: clamp(28px, 4vw, 44px); display: flex; flex-direction: column; gap: 22px;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: 30px; line-height: 38px; color: #3A0F63;">Make the first conversation useful.</h3>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #565469;">Share your organisation, your goal and the main question you need answered. Please do not include patient information or confidential investment materials in an initial email.</p>
+</div>
+<form id="enquiry-form" style="display: flex; flex-direction: column; gap: 18px;">
+<div style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6938A0;">+ Start a conversation</div>
+<div style="display: flex; flex-direction: column; gap: 6px;"><label for="interest" style="font-size: 14px; font-weight: 500; color: #3A0F63;">I’m interested in</label>
+<select id="interest" name="interest" style="font-family: Poppins, sans-serif; font-size: 15px; color: #3A0F63; background: #FFFFFF; border: 1px solid #D9C9F0; border-radius: 6px; padding: 12px 14px; min-height: 48px;">
+<option>Clinic or laboratory</option><option>Biotech or health business</option><option>Investor or family office</option><option>BeyondClock demonstration</option><option>Research or commercial partnership</option><option>Something else</option>
+</select></div>
+<div class="lb-fields" style="gap: 18px;">
+<div style="display: flex; flex-direction: column; gap: 6px;"><label for="name" style="font-size: 14px; font-weight: 500; color: #3A0F63;">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="Full name" style="font-family: Poppins, sans-serif; font-size: 15px; color: #3A0F63; background: #FFFFFF; border: 1px solid #D9C9F0; border-radius: 6px; padding: 12px 14px; min-height: 48px; box-sizing: border-box; width: 100%;"></div>
+<div style="display: flex; flex-direction: column; gap: 6px;"><label for="organisation" style="font-size: 14px; font-weight: 500; color: #3A0F63;">Organisation <span style="font-weight: 300; color: #6E6C84;">(optional)</span></label><input id="organisation" name="organisation" autocomplete="organization" placeholder="Company or clinic" style="font-family: Poppins, sans-serif; font-size: 15px; color: #3A0F63; background: #FFFFFF; border: 1px solid #D9C9F0; border-radius: 6px; padding: 12px 14px; min-height: 48px; box-sizing: border-box; width: 100%;"></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;"><label for="email" style="font-size: 14px; font-weight: 500; color: #3A0F63;">Email address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@organisation.com" style="font-family: Poppins, sans-serif; font-size: 15px; color: #3A0F63; background: #FFFFFF; border: 1px solid #D9C9F0; border-radius: 6px; padding: 12px 14px; min-height: 48px; box-sizing: border-box; width: 100%;"></div>
+<div style="display: flex; flex-direction: column; gap: 6px;"><label for="project" style="font-size: 14px; font-weight: 500; color: #3A0F63;">What would you like to discuss?</label><textarea id="project" name="project" required rows="4" placeholder="We are exploring… and would like help with…" style="font-family: Poppins, sans-serif; font-size: 15px; line-height: 23px; color: #3A0F63; background: #FFFFFF; border: 1px solid #D9C9F0; border-radius: 6px; padding: 12px 14px; box-sizing: border-box; width: 100%; resize: vertical;"></textarea></div>
+<div style="display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center;">
+<button type="submit" class="lb-btn-primary" style="background: #6938A0; color: #FFFFFF; border: 0; font-family: Poppins, sans-serif; font-weight: 500; font-size: 15px; padding: 14px 28px; border-radius: 999px; cursor: pointer; min-height: 48px;">Prepare my enquiry</button>
+<p style="margin: 0; flex: 1; min-width: 220px; font-size: 12px; line-height: 18px; color: #6E6C84;">This standalone preview prepares an email draft. Nothing is sent or stored by this page. Review the draft, then send it from your own email app.</p>
+</div>
+<div id="draft" hidden>
+<div style="background: #F4ECFC; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 14px;">
+<h3 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: 26px; line-height: 32px; color: #3A0F63;">Your draft is ready.</h3>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #565469;">It has not been sent. Open your email app to review and send it, or copy the text.</p>
+<pre id="draft-text" style="margin: 0; background: #FFFFFF; border: 1px solid #E6E0EE; border-radius: 4px; padding: 16px; font-family: Poppins, sans-serif; font-size: 13px; line-height: 21px; color: #3A0F63; white-space: pre-wrap; overflow-wrap: anywhere; max-height: 260px; overflow: auto;"></pre>
+<div style="display: flex; flex-wrap: wrap; gap: 12px;">
+<a href="mailto:superpower@livebeyond.ai" id="mailto-link" style="background: #6938A0; color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 15px; padding: 12px 22px; border-radius: 999px;">Open email app ↗</a>
+<button type="button" id="copy-draft" style="background: transparent; color: #6938A0; border: 1px solid #6938A0; font-family: Poppins, sans-serif; font-weight: 500; font-size: 15px; padding: 11px 21px; border-radius: 999px; cursor: pointer;">Copy draft</button>
+</div>
+<div role="status" id="copy-status" style="font-size: 13px; line-height: 20px; color: #3A0F63;"></div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Footer: deck closing slide -->
+<footer class="lb-dark" style="background: #3A0F63; color: #FFFFFF;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 80px clamp(20px, 4vw, 48px) 40px; display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-wrap: wrap; gap: 32px 64px; justify-content: space-between; align-items: flex-end;">
+<div style="display: flex; flex-direction: column; gap: 22px;">
+<a href="#main" aria-label="Return to LiveBeyond home" style="display: block; line-height: 0;"><img src="images/logo-livebeyond-white.png" alt="LiveBeyond" style="width: 300px; max-width: 100%; height: auto; display: block;"></a>
+<p style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 32px; line-height: 40px; color: #FFFFFF;">Longevity science. <span style="color: #ECDCFC;">Put to work.</span></p>
+<div style="width: 48px; height: 2px; background: #D86CCC;"></div>
+</div>
+<nav aria-label="Footer navigation" style="display: flex; flex-wrap: wrap; gap: 12px 32px; font-size: 15px; font-weight: 400;">
+<a href="#solutions" style="color: #FFFFFF; text-decoration: none;">Who we help</a>
+<a href="#science" style="color: #FFFFFF; text-decoration: none;">The science</a>
+<a href="#contact" style="color: #FFFFFF; text-decoration: none;">Get in touch</a>
+<a href="https://www.linkedin.com/company/live-beyond-ai/" target="_blank" rel="noopener noreferrer" style="color: #ECDCFC; text-decoration: none;">LinkedIn ↗<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);"> (opens a new tab)</span></a>
+</nav>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid #5A2A8A; font-size: 11px; line-height: 18px; letter-spacing: 0.2em; text-transform: uppercase; color: #D9C9F0;">
+<span>LiveBeyond Pte. Ltd. // Singapore</span>
+<span>Independent concept for review // Not the official live website</span>
+<button type="button" data-print="" style="background: transparent; color: #FFFFFF; border: 1px solid #B79AE6; font-family: Poppins, sans-serif; font-size: 12px; letter-spacing: 0.05em; text-transform: none; padding: 8px 18px; border-radius: 999px; cursor: pointer; min-height: 44px;">Print / save as PDF</button>
+</div>
+<details id="notes" style="background: #2E0B50; padding: 0 28px; border-radius: 6px;">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-size: 15px; font-weight: 500; color: #FFFFFF;">Sources, design decisions &amp; pre-launch notes<span class="lb-plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; background: #4A1A78; color: #ECDCFC; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 400;">+</span></summary>
+<div style="padding: 0 0 28px; font-size: 14px; line-height: 22px; color: #D9C9F0; display: flex; flex-direction: column; gap: 12px; max-width: 900px;">
+<h3 style="margin: 8px 0 0; font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #ECDCFC;">About this concept</h3>
+<p style="margin: 0;">This is an independent, proposed rewrite and design prepared for discussion on 16 October 2026. It is not an authorised publication by LiveBeyond. The descriptive offer packaging, first-project examples, contact flow and working process are proposals for the team to approve—not claims that fixed packages already exist.</p>
+<p style="margin: 0;"><strong style="color: #FFFFFF;">Positioning:</strong> LiveBeyond remains the umbrella business. Visitor needs come first; BeyondClock, BeyondImpact and BeyondInsight support the offers rather than force visitors to learn an internal brand hierarchy. The latter two names are retained from the preceding website review and require confirmation.</p>
+<h3 style="margin: 8px 0 0; font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #ECDCFC;">Sources used</h3>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+<li><a href="https://www.linkedin.com/company/live-beyond-ai/" target="_blank" rel="noopener noreferrer" style="color: #ECDCFC;">LiveBeyond’s own company profile and posts</a>: advisory audiences, scientific/commercialisation focus, Brian Kennedy’s co-founder and chair role, and contact email. The LiveBeyond.ai domain could not be retrieved during this build; company-owned public material was used to cross-check the broad scope.</li>
+<li>User-provided <i>BeyondClock brochure (clinics)</i>, 21 August 2026, pages 2–4: research contributors, routine-biomarker basis and report outputs. The three named scientific portraits were extracted from this document and compressed.</li>
+<li>User-provided <i>BC Brochure clinics with case studies</i>, 5 October 2026, pages 2–7: clinic/laboratory audience, outputs and proposed workflow. The individual case stories are not presented here as proof of clinical effectiveness.</li>
+<li>User-provided <i>BeyondClock Sample Report</i>, 5 October 2026 file, generated 28 September 2026: pages 6 and 9 supply the selected example values. Page 1 provides the general-wellbeing intended-use statement. The preview adapts the layout and displays only selected values; it is not a screenshot of the current application. It does not embed the full report, report identifier, medical history or individual laboratory results.</li>
+<li><a href="https://www.nature.com/articles/s41514-025-00221-4" target="_blank" rel="noopener noreferrer" style="color: #ECDCFC;">Fong et al., LinAge2, <i>npj Aging</i> 11, 29 (2025)</a>: publication, authorship and study focus. Predictive research evidence is kept separate from proven treatment benefit.</li>
+<li><a href="https://www.rafflesmedicalgroup.com/raffles-healthy-longevity/" target="_blank" rel="noopener noreferrer" style="color: #ECDCFC;">Raffles Medical Group’s HealthyLongevity page</a>: publicly listed Biological Age Clock Test with LiveBeyond. No Raffles testimonial, outcome claim, exclusivity claim or logo endorsement is implied.</li>
+<li><a href="https://www.a4m.com/longevity-fest-2026-3-day/index.html" target="_blank" rel="noopener noreferrer" style="color: #ECDCFC;">LongevityFest 2026 speaker listing</a> and <a href="https://www.linkedin.com/posts/julieyingpingzhu_the-hardest-part-of-getting-science-into-activity-7504185295995580417-eJTi" target="_blank" rel="noopener noreferrer" style="color: #ECDCFC;">Julie Ying Baron’s own public commentary</a>: co-founder identification and research-to-practice focus. “Co-founder” avoids choosing between inconsistent executive titles across sources.</li>
+</ul>
+<h3 style="margin: 8px 0 0; font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #ECDCFC;">Decisions required before going live</h3>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+<li><strong style="color: #FFFFFF;">Commercial scope:</strong> Confirm which advisory engagements are actively sold, the deliverables, expert availability, pricing approach and partnership criteria. Confirm Brian and Julie’s preferred biographies and all product/brand relationships.</li>
+<li><strong style="color: #FFFFFF;">Product and claims:</strong> The brochures use more expansive clinical language than the sample report’s non-medical intended-use statement. That discrepancy has not been resolved. This concept follows the report’s narrower description. The company must approve jurisdiction-specific intended use, claims and required disclosures before launch.</li>
+<li><strong style="color: #FFFFFF;">Operations:</strong> Verify required inputs, missing-marker handling, upload workflow, turnaround, access, data residency and contractual privacy arrangements. API integration, universal panel compatibility, response-time promises and clinical-outcome guarantees have deliberately not been invented.</li>
+<li><strong style="color: #FFFFFF;">Rights:</strong> Secure permission for the portraits, sample values and references before publishing. Team photographs are genuine supplied assets; no new likenesses were generated. Research collaborators are not represented as full-time employees.</li>
+<li><strong style="color: #FFFFFF;">Lead handling:</strong> Replace the local email-draft builder with an approved form/CRM or booking system only after the destination, consent and privacy terms are agreed. Do not enable patient-file uploads on a marketing enquiry form.</li>
+<li><strong style="color: #FFFFFF;">Publication:</strong> Replace this concept banner and notes after approval; add approved privacy/legal pages, live-domain metadata and a social-sharing image; remove any noindex directive only for the authorised public launch.</li>
+</ul>
+<h3 style="margin: 8px 0 0; font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #ECDCFC;">Visual pass · 19 Nov 2026</h3>
+<p style="margin: 0;">Restyled to the approved BeyondClock investor-deck look (10-min pitch, v78) and the approved Midjourney image set. Content is unchanged from the 16 October concept. White and lilac grounds (#FFFFFF, #F4ECFC, #ECDCFC), violet #6938A0 and deep plum #3A0F63 lead, with pink (#B8429F) reserved for emphasis words in headlines. Headlines use Playfair Display Italic and text uses Poppins, as in the deck. Deck devices reused: “01 //” section labels, numbered cards, “+ Message” bars, round violet arrow buttons, split section slides with a large numeral, and the plum closing slide. Imagery is taken directly from the deck: lavender hills (hero, deck slide 40), glass crystals (Who we help, slide 2), molecular ring (BeyondClock and the quote slide, slides 32 and 36), purple swirl (divider, slide 9), laughing couple (people, slide 19), pavilion (partnerships, slide 64) and the woman at sunrise (contact, slide 33). Grounds are only white #FFFFFF, lilac #F4ECFC and plum #3A0F63, as in the deck. The LiveBeyond wordmark files are unchanged.</p>
+</div>
+</details>
+</div>
+</footer>
+
+<!-- Report dialog -->
+<div id="report" hidden>
+<div id="report-backdrop" style="position: fixed; inset: 0; background: rgba(58, 15, 99, 0.72); z-index: 50; display: flex; align-items: center; justify-content: center; padding: 16px;">
+<div role="dialog" aria-modal="true" aria-labelledby="report-dialog-title" id="report-dialog" style="background: #FFFFFF; width: 100%; max-width: 760px; max-height: calc(100vh - 32px); overflow: auto; border-radius: 8px; box-shadow: 0 32px 64px -24px rgba(58, 15, 99, 0.5);">
+<div style="position: sticky; top: 0; background: #FFFFFF; border-bottom: 1px solid #E6E0EE; padding: 20px 28px; display: flex; justify-content: space-between; align-items: center; gap: 16px;">
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<span style="font-size: 10px; line-height: 14px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: #6938A0;">02 // BeyondClock sample</span>
+<h2 id="report-dialog-title" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; font-size: 28px; line-height: 34px; color: #3A0F63;">Inside a BeyondClock report</h2>
+</div>
+<button type="button" id="report-close" aria-label="Close report preview" style="flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid #D9C9F0; background: #FFFFFF; color: #3A0F63; font-size: 22px; line-height: 1; cursor: pointer;">×</button>
+</div>
+<div style="padding: 24px 28px 28px; display: flex; flex-direction: column; gap: 20px;">
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #565469;">An adapted preview using selected values from the supplied sample. This is a report explanation, not a live calculation or medical assessment.</p>
+<div role="tablist" aria-label="Sample report sections" style="display: flex; flex-wrap: wrap; gap: 8px;">
+<button type="button" role="tab" aria-selected="true" data-tab="overview" style="background: #6938A0; color: #FFFFFF; border: 1px solid #6938A0; font-family: Poppins, sans-serif; font-weight: 500; font-size: 14px; padding: 10px 18px; border-radius: 999px; cursor: pointer; min-height: 44px;">The estimate</button>
+<button type="button" role="tab" aria-selected="false" data-tab="patterns" style="background: #FFFFFF; color: #3A0F63; border: 1px solid #D9C9F0; font-family: Poppins, sans-serif; font-weight: 500; font-size: 14px; padding: 10px 18px; border-radius: 999px; cursor: pointer; min-height: 44px;">The contributors</button>
+<button type="button" role="tab" aria-selected="false" data-tab="limits" style="background: #FFFFFF; color: #3A0F63; border: 1px solid #D9C9F0; font-family: Poppins, sans-serif; font-weight: 500; font-size: 14px; padding: 10px 18px; border-radius: 999px; cursor: pointer; min-height: 44px;">The limits</button>
+</div>
+<div data-panel="overview">
+<div role="tabpanel" style="display: flex; flex-direction: column; gap: 16px;">
+<h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 400; color: #3A0F63;">One estimate. In context.</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+<div style="border: 1px solid #E6E0EE; border-left: 3px solid #B79AE6; border-radius: 4px; padding: 16px;"><span style="font-size: 12px; color: #6E6C84;">Chronological age</span><div style="font-size: 34px; line-height: 42px; color: #3A0F63;">57.5 <small style="font-size: 14px; color: #6E6C84;">yrs</small></div></div>
+<div style="border: 1px solid #E6E0EE; border-left: 3px solid #6938A0; border-radius: 4px; padding: 16px;"><span style="font-size: 12px; color: #6E6C84;">Estimated biological age</span><div style="font-size: 34px; line-height: 42px; color: #3A0F63;">60.6 <small style="font-size: 14px; color: #6E6C84;">yrs</small></div></div>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: #565469;">The sample estimate is <strong style="font-weight: 500; color: #3A0F63;">3.1 years above chronological age</strong>. It summarises biomarker-based signals through the model. It does not mean every organ is 60.6 years old or say how long this person will live.</p>
+<div style="background: #F4ECFC; border-radius: 6px; padding: 16px 20px; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 17px; line-height: 26px; color: #3A0F63;">A useful next question is not simply “Is the number high or low?” It is “Which patterns contributed to it, and how should those be interpreted in context?”</div>
+</div>
+</div>
+<div data-panel="patterns" hidden>
+<div role="tabpanel" style="display: flex; flex-direction: column; gap: 16px;">
+<h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 400; color: #3A0F63;">Look beneath the headline number.</h3>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: #565469;">The model groups related inputs into principal components (“PCs”). These selected rows show their reported contributions to the estimate.</p>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="display: grid; grid-template-columns: 64px 1fr 88px; gap: 12px; align-items: center; font-size: 14px; color: #3A0F63;"><span>PC1F</span><div aria-hidden="true" style="height: 10px; background: #F4ECFC; border-radius: 5px; overflow: hidden;"><div style="width: 100%; height: 100%; background: #6938A0;"></div></div><span style="text-align: right;">+5.4 years</span></div>
+<div style="display: grid; grid-template-columns: 64px 1fr 88px; gap: 12px; align-items: center; font-size: 14px; color: #3A0F63;"><span>PC24F</span><div aria-hidden="true" style="height: 10px; background: #F4ECFC; border-radius: 5px; overflow: hidden;"><div style="width: 50%; height: 100%; background: #6938A0;"></div></div><span style="text-align: right;">+2.7 years</span></div>
+<div style="display: grid; grid-template-columns: 64px 1fr 88px; gap: 12px; align-items: center; font-size: 14px; color: #3A0F63;"><span>PC23F</span><div aria-hidden="true" style="height: 10px; background: #F4ECFC; border-radius: 5px; overflow: hidden;"><div style="width: 46%; height: 100%; background: #6938A0;"></div></div><span style="text-align: right;">+2.5 years</span></div>
+<div style="display: grid; grid-template-columns: 64px 1fr 88px; gap: 12px; align-items: center; font-size: 14px; color: #3A0F63;"><span>PC6F</span><div aria-hidden="true" style="height: 10px; background: #F4ECFC; border-radius: 5px; overflow: hidden;"><div style="width: 52%; height: 100%; background: #C455B8;"></div></div><span style="text-align: right;">−2.8 years</span></div>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #565469;">These are only selected contributors. They do not add up to the overall age difference, and they are not stand-alone treatment targets.</p>
+</div>
+</div>
+<div data-panel="limits" hidden>
+<div role="tabpanel" style="display: flex; flex-direction: column; gap: 14px;">
+<h3 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 400; color: #3A0F63;">Know what the report cannot tell you.</h3>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: #565469;">The sample report states that the software is intended for general wellbeing, not for medical purposes. Its output is not medical advice.</p>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: #565469;">Its biomarker simulations are mathematical “what happens to the model?” exercises—not proven interventions or recommendations to change a laboratory value.</p>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: #565469;">The report’s anatomical headings organise disease- and risk-domain results. The sample explicitly states that these are <strong style="font-weight: 500; color: #3A0F63;">not organ-level scores or diagnoses</strong>.</p>
+<div style="background: #F4ECFC; border-radius: 6px; padding: 16px 20px; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 17px; line-height: 26px; color: #3A0F63;">A lower biological-age estimate is not, by itself, proof of slower aging, disease prevention, added healthy years or treatment effectiveness.</div>
+</div>
+</div>
+<p style="margin: 0; font-size: 12px; line-height: 18px; color: #6E6C84;">Source: supplied BeyondClock sample report, generated 28 September 2026; overview p. 6, component matrix p. 9, simulations p. 7, anatomical-grouping note p. 8 and intended-use statement p. 1. Layout adapted for this concept.</p>
+<div><a href="#contact" data-pick="demo2" class="lb-btn-primary" style="display: inline-block; background: #6938A0; color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 15px; padding: 13px 24px; border-radius: 999px;">Arrange a team demonstration <span aria-hidden="true">↗</span></a></div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<script>
+(function () {
+  var EMAIL = 'superpower@livebeyond.ai';
+  var PRESETS = {
+    clinic: ['Clinic or laboratory', 'I would like to discuss our longevity programme and whether BeyondClock fits our laboratory panel.'],
+    biotech: ['Biotech or health business', 'I would like to discuss scientific review and a development plan for our product or intervention.'],
+    investor: ['Investor or family office', 'I would like to discuss scientific due diligence on a longevity company or technology.'],
+    partner: ['Research or commercial partnership', 'I would like to explore a research or commercial partnership with LiveBeyond.'],
+    demo: ['BeyondClock demonstration', 'Please walk us through BeyondClock, the input requirements and a sample report.'],
+    team: ['Research or commercial partnership', 'I would like to speak with the LiveBeyond team about a potential collaboration.'],
+    partnership: ['Research or commercial partnership', 'I would like to discuss a potential research, technology or distribution partnership.'],
+    demo2: ['BeyondClock demonstration', 'Please walk us through BeyondClock and how to interpret the report in context.']
+  };
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  // Mobile menu
+  var menuBtn = $('#menu-btn'), menu = $('#mobile-nav-wrap');
+  function setMenu(open) {
+    menu.hidden = !open;
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  }
+  menuBtn.addEventListener('click', function () { setMenu(menu.hidden); });
+  $$('[data-close-menu]').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+
+  // Review notes
+  $$('[data-open-notes]').forEach(function (a) { a.addEventListener('click', function () { $('#notes').open = true; }); });
+
+  // Enquiry form + presets
+  var form = $('#enquiry-form'), draft = $('#draft'), prefilled = false;
+  var f = { interest: $('#interest'), name: $('#name'), org: $('#organisation'), email: $('#email'), project: $('#project') };
+  function clearDraft() { draft.hidden = true; $('#copy-status').textContent = ''; }
+  Object.keys(f).forEach(function (k) {
+    f[k].addEventListener('input', function () { if (k === 'project') prefilled = false; clearDraft(); });
+  });
+  $$('[data-pick]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var p = PRESETS[el.getAttribute('data-pick')]; if (!p) return;
+      f.interest.value = p[0];
+      if (!f.project.value.trim() || prefilled) { f.project.value = p[1]; prefilled = true; }
+      clearDraft(); setMenu(false); closeReport();
+    });
+  });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = f.name.value.trim(), org = f.org.value.trim();
+    var subject = 'LiveBeyond enquiry: ' + f.interest.value;
+    var body = 'Hello LiveBeyond team,\n\n' + f.project.value.trim() + '\n\nArea of interest: ' + f.interest.value +
+      '\nName: ' + name + (org ? '\nOrganisation: ' + org : '') + '\nReply email: ' + f.email.value.trim() + '\n\nBest,\n' + name;
+    $('#draft-text').textContent = 'To: ' + EMAIL + '\nSubject: ' + subject + '\n\n' + body;
+    $('#mailto-link').href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    draft.hidden = false;
+  });
+  $('#copy-draft').addEventListener('click', function () {
+    var status = $('#copy-status'), text = $('#draft-text').textContent;
+    var fail = 'Copy is unavailable here. Select the draft text above, or use “Open email app”.';
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function () { status.textContent = 'Copied. Paste it into your email app when ready.'; },
+        function () { status.textContent = fail; });
+    } else { status.textContent = fail; }
+  });
+
+  // Sample report dialog
+  var report = $('#report'), lastFocus = null;
+  function openReport() { lastFocus = document.activeElement; report.hidden = false; selectTab('overview'); $('#report-close').focus(); }
+  function closeReport() { if (report.hidden) return; report.hidden = true; if (lastFocus) lastFocus.focus(); }
+  $$('[data-open-report]').forEach(function (b) { b.addEventListener('click', openReport); });
+  $('#report-close').addEventListener('click', closeReport);
+  $('#report-backdrop').addEventListener('click', function (e) { if (e.target === e.currentTarget) closeReport(); });
+  $('#report-dialog').addEventListener('keydown', function (e) { if (e.key === 'Escape') closeReport(); });
+  function selectTab(name) {
+    $$('[data-tab]').forEach(function (b) {
+      var on = b.getAttribute('data-tab') === name;
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+      b.style.background = on ? '#6938A0' : '#FFFFFF';
+      b.style.color = on ? '#FFFFFF' : '#3A0F63';
+      b.style.borderColor = on ? '#6938A0' : '#D9C9F0';
+    });
+    $$('[data-panel]').forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== name; });
+  }
+  $$('[data-tab]').forEach(function (b) { b.addEventListener('click', function () { selectTab(b.getAttribute('data-tab')); }); });
+
+  // Print
+  $$('[data-print]').forEach(function (b) { b.addEventListener('click', function () { window.print(); }); });
+})();
+
+</script>
+</body>
+</html>
